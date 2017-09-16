@@ -1,5 +1,18 @@
 sudo: false
 language: ruby
-rvm:
-  - 2.4.1
-before_install: gem install bundler -v 1.15.0
+os: osx
+before_install:
+- gem install bundler -v 1.15.0
+install:
+- bundle install --path vendor/bundle
+script:
+- bundle exec rake spec
+- bundle exec rake
+deploy:
+  provider: rubygems
+  api_key:
+    secure: K6pfF/p4eWhSKwqMGkFb1dlYA3f3i4OMr6zJS2fVRvQm3XpmH803fQanzJKY8VkAxKKE4IjfUH/sDXqXvJi2doBLBtl2q3BG3pdY9vGW6Kfv6hgJGoKpOkLNhme/N5bwY7fAnW19MD97e/3E1TUG2qpLsUwaT+Y1hnlahUayk5zPQ8GwbviPH34/5c//1FKZEkJYrM33l3Fd2E3x4+zn6eK3oU1oBxUuDdluQ0GKZU+HlbXQhIVO0SlEk4dCy7DMJoFX5NtqjfwfVV6yx0k0mwwI8VXoXAqiCeyM/Ea9EtFkcmaWlOI7uXJaOonLHAZFaIxEtvBME9g4DNauGxzbvzeHsFAkRBjpXE99jj3PHfcVeUWgIQUFCnIsjKDZQAGa0+BP3iQAvo9FOyeSCNsqdstNQ96c9sCy/c+SC5np48v2irB4Sw19hsurQf5uzD/1mKhnqJgLksPnSmKlaylLvfjXcc+cf/ngicMwt8JolFPy3OrMauuocz+5RD0/3gMWOiqc/rGOW8CxbS8fmcOYlObxrfn1G63CMwUfZJfHuBRweveILYVsk8gWYsejsPZzNHi+GddKoSsc+O9MeGbTBrmjVknN4jxYW/1tk8ZSCciKhQHTE26v/Uz38D+z1ILOeDzRPZ3YB1G2TYaGwaq01X0aqHGa/NclkoKeZnLorfM=
+  gem: xcode-pristine
+  on:
+    tags: true
+    repo: sgleadow/xcode-pristine
