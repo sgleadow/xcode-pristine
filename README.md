@@ -1,8 +1,8 @@
-# Xcode::Pristine
+# xcode-pristiene (Work In Progress)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/xcode/pristine`. To experiment with that code, run `bin/console` for an interactive prompt.
+A gem to help keep your Xcode project file pristine.
 
-TODO: Delete this and the text above, and describe your gem
+When you're using `xcconfig` files to manage your Xcode build settings, you don't want those build settings being overridded inside the Xcode project files build settings editor. This gem used the [xcodeproj gem](https://github.com/CocoaPods/Xcodeproj) from cocoapods, to inspect the build settings in the project file and ensure they're empty.
 
 ## Installation
 
@@ -22,7 +22,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To ensure your project file is free of unwanted build settings, simply run:
+
+    $ xcpristine
+
+By default, it finds any  `.xcodeproj` files in the current directory and inspects _all build configurations_ and _all targets_.
+
+There may be situations where you want to only inspect _some project files_ or _not all of the configurations or targets for a project_. If that's the case, raise an issue and let's discuss how to add it, I haven't found a need for that yet, as either your project is using xcconfig files or it isn't.
 
 ## Development
 
