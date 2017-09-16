@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "xcode/pristine"
+require "xcode_pristine"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
