@@ -1,4 +1,4 @@
-# xcode-pristiene (Work In Progress)
+# xcode-pristiene (Work In Progress) [![Build Status](https://travis-ci.org/sgleadow/xcode-pristine.svg?branch=master)](https://travis-ci.org/sgleadow/xcode-pristine)
 
 A gem to help keep your Xcode project file pristine.
 
