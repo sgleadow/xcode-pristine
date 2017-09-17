@@ -13,19 +13,13 @@ module XcodePristine
       messages.join("\n")
     end
 
-    private
-
     def messages
       messages = []
 
-      messages += message_for_configurations(@project.build_configurations)
-      messages += message_for_configurations(@project.targets.map(&:build_configurations).flatten)
+      messages += @project.build_configurations.map { |config| config.build_settings.map { |k,v| "#{config.name}: #{k}=#{v}" } }.flatten
+      messages += @project.targets.map { |target| target.build_configurations.map { |config| config.build_settings.map { |k,v| "#{target.name}, #{config.name}: #{k}=#{v}" } }.flatten }.flatten
 
       messages
-    end
-
-    def message_for_configurations configurations
-      configurations.map { |config| config.build_settings.map { |k,v| "#{k}=#{v}" } }.flatten
     end
   end
 

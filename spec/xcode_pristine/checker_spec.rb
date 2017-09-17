@@ -40,8 +40,7 @@ RSpec.describe XcodePristine::Checker do
     end
 
     it "should report the settings in the message" do
-      message = @checker.message
-      expect(message).not_to be_empty
+      expect(@checker.message).to eq "Sample Config: SOME_SETTING=some_value"
     end
   end
 
@@ -71,8 +70,7 @@ RSpec.describe XcodePristine::Checker do
     end
 
     it "should report the settings in the message" do
-      message = @checker.message
-      expect(message).not_to be_empty
+      expect(@checker.message).to eq "Sample Target, Sample Config: SOME_SETTING=some_value"
     end
   end
 end
