@@ -47,8 +47,11 @@
 		C979D9011F7070500011D34F /* SampleNoSettingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleNoSettingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C979D9051F7070500011D34F /* SampleNoSettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleNoSettingsUITests.swift; sourceTree = "<group>"; };
 		C979D9071F7070500011D34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C979D9141F7081AB0011D34F /* app.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = app.xcconfig; sourceTree = "<group>"; };
 		C979D9151F7081AB0011D34F /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		C979D9161F7081AB0011D34F /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		C979D9171F7081AB0011D34F /* unit-test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "unit-test.xcconfig"; sourceTree = "<group>"; };
+		C979D91C1F7082570011D34F /* ui-test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "ui-test.xcconfig"; sourceTree = "<group>"; };
 		C979D91D1F7083050011D34F /* common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = common.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,9 @@
 				C979D91D1F7083050011D34F /* common.xcconfig */,
 				C979D9151F7081AB0011D34F /* debug.xcconfig */,
 				C979D9161F7081AB0011D34F /* release.xcconfig */,
+				C979D9141F7081AB0011D34F /* app.xcconfig */,
+				C979D9171F7081AB0011D34F /* unit-test.xcconfig */,
+				C979D91C1F7082570011D34F /* ui-test.xcconfig */,
 			);
 			name = Configuration;
 			path = ../Configuration;
@@ -346,97 +352,43 @@
 		};
 		C979D90B1F7070500011D34F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C979D9141F7081AB0011D34F /* app.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8S3QUDD6DM;
-				INFOPLIST_FILE = SampleNoSettings/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stewgleadow.SampleNoSettings;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		C979D90C1F7070500011D34F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C979D9141F7081AB0011D34F /* app.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8S3QUDD6DM;
-				INFOPLIST_FILE = SampleNoSettings/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stewgleadow.SampleNoSettings;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		C979D90E1F7070500011D34F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C979D9171F7081AB0011D34F /* unit-test.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8S3QUDD6DM;
-				INFOPLIST_FILE = SampleNoSettingsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stewgleadow.SampleNoSettingsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleNoSettings.app/SampleNoSettings";
 			};
 			name = Debug;
 		};
 		C979D90F1F7070500011D34F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C979D9171F7081AB0011D34F /* unit-test.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8S3QUDD6DM;
-				INFOPLIST_FILE = SampleNoSettingsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stewgleadow.SampleNoSettingsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleNoSettings.app/SampleNoSettings";
 			};
 			name = Release;
 		};
 		C979D9111F7070500011D34F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C979D91C1F7082570011D34F /* ui-test.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8S3QUDD6DM;
-				INFOPLIST_FILE = SampleNoSettingsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stewgleadow.SampleNoSettingsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SampleNoSettings;
 			};
 			name = Debug;
 		};
 		C979D9121F7070500011D34F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C979D91C1F7082570011D34F /* ui-test.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8S3QUDD6DM;
-				INFOPLIST_FILE = SampleNoSettingsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stewgleadow.SampleNoSettingsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SampleNoSettings;
 			};
 			name = Release;
 		};
