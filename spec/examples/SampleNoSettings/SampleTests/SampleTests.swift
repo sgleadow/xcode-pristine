@@ -1,15 +1,7 @@
-//
-//  SampleNoSettingsTests.swift
-//  SampleNoSettingsTests
-//
-//  Created by Stewart Gleadow on 19/9/17.
-//  Copyright © 2017 Stewart Gleadow. All rights reserved.
-//
-
 import XCTest
-@testable import SampleNoSettings
+@testable import Sample
 
-class SampleNoSettingsTests: XCTestCase {
+class SampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -24,13 +16,6 @@ class SampleNoSettingsTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
     }
     
 }

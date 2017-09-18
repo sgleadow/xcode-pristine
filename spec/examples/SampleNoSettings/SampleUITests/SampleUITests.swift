@@ -1,14 +1,6 @@
-//
-//  SampleNoSettingsUITests.swift
-//  SampleNoSettingsUITests
-//
-//  Created by Stewart Gleadow on 19/9/17.
-//  Copyright © 2017 Stewart Gleadow. All rights reserved.
-//
-
 import XCTest
 
-class SampleNoSettingsUITests: XCTestCase {
+class SampleUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  SampleNoSettings
-//
-//  Created by Stewart Gleadow on 19/9/17.
-//  Copyright © 2017 Stewart Gleadow. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
