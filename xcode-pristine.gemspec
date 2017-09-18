@@ -5,7 +5,7 @@ require "xcode_pristine/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "xcode-pristine"
-  spec.version       = XcodePristine::VERSION
+  spec.version       = XcodePristine::Version::CURRENT
   spec.authors       = ["Stewart Gleadow"]
   spec.email         = ["sgleadow@gmail.com"]
 

@@ -1,7 +1,7 @@
 require "spec_helper"
 
-RSpec.describe "Version" do
+RSpec.describe "XcodePristine::Version" do
   it "has a version number" do
-    expect(XcodePristine::VERSION).not_to be nil
+    expect(XcodePristine::Version::CURRENT).not_to be nil
   end
 end
