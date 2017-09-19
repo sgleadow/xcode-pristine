@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require 'xcode_pristine'
+
+XcodePristine::Runner.run ARGV

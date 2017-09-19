@@ -5,6 +5,10 @@ module XcodePristine
       @project = xcodeproj
     end
 
+    def project_name
+
+    end
+
     def has_build_settings?
       !message.empty?
     end
