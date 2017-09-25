@@ -13,8 +13,8 @@ module XcodePristine
       !message.empty?
     end
 
-    def message
-      messages.join("\n")
+    def message indent = ""
+      messages.map { |msg| indent + msg }.join("\n")
     end
 
     def messages

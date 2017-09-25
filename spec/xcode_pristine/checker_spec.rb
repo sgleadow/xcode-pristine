@@ -42,6 +42,10 @@ RSpec.describe XcodePristine::Checker do
     it "should report the settings in the message" do
       expect(@checker.message).to eq "Sample Config: SOME_SETTING=some_value"
     end
+
+    it "should indent the settings in the message" do
+      expect(@checker.message("    ")).to eq "    Sample Config: SOME_SETTING=some_value"
+    end
   end
 
   context "when the targets have empty settings" do
@@ -71,6 +75,10 @@ RSpec.describe XcodePristine::Checker do
 
     it "should report the settings in the message" do
       expect(@checker.message).to eq "Sample Target, Sample Config: SOME_SETTING=some_value"
+    end
+
+    it "should indent the settings in the message" do
+      expect(@checker.message("    ")).to eq "    Sample Target, Sample Config: SOME_SETTING=some_value"
     end
   end
 end
