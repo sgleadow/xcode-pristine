@@ -9,17 +9,14 @@ module XcodePristine
     def self.run args
       finder = ProjectFinder.new args
 
-      unless finder.valid?
-        puts USAGE_MESSAGE
-        return Status::USAGE
-      end
-
-      projects = finder.project_files.map do |proj|
-        Xcodeproj::Project.open(proj)
-      end.map do |xcodeproj|
+      projects = finder.projects.map do |xcodeproj|
         Checker.new(xcodeproj)
       end
 
+      if projects.empty?
+        puts USAGE_MESSAGE
+        return Status::USAGE
+      end
 
       projects.each do |checker|
         puts "Project..."

@@ -40,6 +40,33 @@ RSpec.describe XcodePristine do
     end
   end
 
+  context "when given a workspace" do
+    context "with build settings in any of the contained projects" do
+      it "should detect and print those build settings" do
+        project_dir = File.join(File.dirname(__FILE__), "examples", "SampleWorkspace", "Sample.xcworkspace")
+
+        expected_output = <<~END_OUTPUT
+        Project...
+        Project... OK.
+        Project...
+          Debug: TARGETED_DEVICE_FAMILY=1
+          Release: TARGETED_DEVICE_FAMILY=2
+          Sample, Debug: IPHONEOS_DEPLOYMENT_TARGET=10.0
+          Sample, Release: IPHONEOS_DEPLOYMENT_TARGET=10.0
+          SampleTests, Debug: SDKROOT=iphoneos
+          SampleTests, Debug: SUPPORTED_PLATFORMS=iphonesimulator iphoneos
+          SampleTests, Release: SDKROOT=iphoneos
+          SampleTests, Release: SUPPORTED_PLATFORMS=iphonesimulator iphoneos
+          SampleUITests, Debug: ENABLE_TESTABILITY=YES
+        Project... Failed.
+        END_OUTPUT
+
+        expect { @result = XcodePristine::Runner.run [project_dir] }.to output(expected_output).to_stdout
+        expect(@result).to eq XcodePristine::Status::SETTINGS
+      end
+    end
+  end
+
   context "with invalid arguments" do
     before(:example) do
       @usage_output = <<~END_OUTPUT
