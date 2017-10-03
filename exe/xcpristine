@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
+lib = File.expand_path("../lib")
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'xcode_pristine'
 
 result = XcodePristine::Runner.run ARGV
