@@ -1,5 +1,5 @@
 module XcodePristine
   module Version
-    CURRENT = "0.1.3"
+    CURRENT = "0.1.4"
   end
 end
